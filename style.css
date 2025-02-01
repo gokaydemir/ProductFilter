@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+.productImage {
+  display: block;
+  margin: 9px auto 0px auto;
+  table-layout: fixed;
+  position: relative;
+  overflow: hidden;
+  height: 366px;
+  width: 231px;
+  object-fit: cover;
+}
+
+.option {
+  width: 100%;
+  padding: 16px;
+  margin: 10px 0;
+  border: 2px solid #e5e7eb;
+  border-radius: 50px;
+  background: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+}
+
+.option:hover {
+  background: #f9fafb;
+}
+
+.option.selected {
+  border-color: #000;
+  background: #000;
+  color: white;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.nav-button {
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#backBtn {
+  border: 2px solid #e5e7eb;
+  background: white;
+  color: #6b7280;
+}
+
+#nextBtn {
+  border: none;
+  background: #000;
+  color: white;
+}
+
+#nextBtn:disabled {
+  background: #e5e7eb;
+  cursor: not-allowed;
+}
+.products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.productTitle {
+  text-align: center;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+.productOldPrice {
+  text-align: center;
+  color: #c4c4c4;
+  font-size: 13px;
+  margin-top: 12px;
+  text-decoration: line-through;
+}
+.productPrice {
+  text-align: center;
+  color: #db1a16;
+  font-size: 15px;
+  margin-top: 5px;
+}
+div#no-products-found {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.productViewButton {
+  background-color: #000;
+  color: #fff;
+  padding: 7px;
+  border-radius: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 158px;
+  border: 1px solid #000;
+  margin-top: 11px;
+  cursor: pointer;
+}
+.steps {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 40px;
+}
+
+.step {
+  width: 31px;
+  height: 3px;
+  border-radius: 0%;
+  background: #e5e7eb;
+}
+
+.step.active {
+  background: #a6a6a6;
+}
+div#productContainer {
+  min-height: 540px;
+}
+
+/* Swiper */
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #000 !important;
+  opacity: 0.8;
+  width: 50px;
+  height: 25px;
+}
+
+span.swiper-pagination-bullet {
+  border-radius: unset;
+  width: 39px;
+  height: 2px;
+  background-color: #a3a3a3;
+}
+
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #5d5d5d;
+}
