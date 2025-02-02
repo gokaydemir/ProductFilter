@@ -5,7 +5,7 @@ let answers = {};
 let swiper = null;
 
 
-fetch('/question.json')
+fetch('./question.json')
     .then(response => response.json())
     .then(data => {
         questions = data;
@@ -57,7 +57,7 @@ function nextStep() {
         showQuestion(currentStep);
     } else {
 
-        fetch('/product.json')
+        fetch('./product.json')
             .then(response => response.json())
             .then(data => {
                 const selectedPriceRange = answers.price;
